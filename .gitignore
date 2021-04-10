@@ -102,3 +102,14 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Yarn berry with offline cache enabled
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# MacOS system files
+.DS_Store

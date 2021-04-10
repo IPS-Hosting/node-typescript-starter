@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/node14",
+  "compilerOptions": {
+	"outDir": "./dist",
+	"rootDir": "./src",
+
+	"importHelpers": true,
+	"sourceMap": true,
+	"importsNotUsedAsValues": "error",
+	"noFallthroughCasesInSwitch": true,
+	"noUncheckedIndexedAccess": true,
+	"noUnusedLocals": true,
+  },
+  "include": ["src/**/*.ts"]
+}

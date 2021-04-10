@@ -1,0 +1,13 @@
+# Keep the build context as small as possible by whitelisting needed files.
+# Exclude everything by default.
+*
+
+# Whitelist only files needed in the build context.
+!package.json
+!yarn.lock
+!.yarnrc.yml
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!tsconfig.json
+!src
