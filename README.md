@@ -1,4 +1,4 @@
-# node-typescript
+# node-typescript-starter
 A very opinionated template for Node.js applications written in TypeScript.
 
 ## Yarn package manager
