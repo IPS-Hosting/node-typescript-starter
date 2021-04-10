@@ -67,5 +67,5 @@ docker build -t myapplication .
 
 ## Don't like something that is configured in this repo?
 This repository is meant to be a good starting point for Node.js applications written in TypeScript.
-It is very opinionated, but can save a lot of time.
+It is very opinionated, but can save a lot of time. You can customize everything to your liking after using this template.
 You think there's something that could be changed which would help everybody? Feel free to open a pull requeqst!
