@@ -16,6 +16,7 @@ yarn add -E package
 # Install a package to devDependencies.
 yarn add -DE package
 ```
+`yarn` is configured to automatically install corresponding `@types/` packages.
 
 ## Important commands
 ```
