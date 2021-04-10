@@ -72,6 +72,9 @@ There is a sample `Dockerfile` which will produce a lightweight image of your ap
 docker build -t myapplication .
 ```
 
+## Other recommendations
+Automate version management and package publishing e.g. using [semantic-release](https://semantic-release.gitbook.io/semantic-release/).
+
 ## Don't like something that is configured in this repo?
 This repository is meant to be a good starting point for Node.js applications written in TypeScript.
 It is very opinionated, but can save a lot of time. You can customize everything to your liking after using this template.
