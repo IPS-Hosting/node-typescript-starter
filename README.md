@@ -1,6 +1,12 @@
 # node-typescript-starter
 A very opinionated template for Node.js applications written in TypeScript.
 
+## Version information
+* Node.js **14**
+* TypeScript **4.2**
+* ESLint **7**
+* Yarn **berry**
+
 ## Yarn package manager
 You need to have `yarn` installed. To install, run `npm install -g yarn`.
 
