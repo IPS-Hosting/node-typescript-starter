@@ -44,20 +44,20 @@
     "typescript": "4.2.4"
   },
   "release": {
-	"branches": [
-	  "master",
-	  {
-		"name": "next",
-		"prelease": true
-	  }
-	],
-	"preset": "angular",
-	"plugins": [
-	  "@semantic-release/commit-analyzer",
-	  "@semantic-release/release-notes-generator",
-	  "@semantic-release/changelog",
-	  "@semantic-release/github",
-	  "@semantic-release/git"
-	]
+    "branches": [
+      "master",
+      {
+        "name": "next",
+        "prelease": true
+      }
+    ],
+    "preset": "angular",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ]
   }
 }
