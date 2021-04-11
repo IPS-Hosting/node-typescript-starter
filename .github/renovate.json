@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "baseBranches": ["master"],
+  "baseBranches": ["dev"],
   "extends": [
 	":pinVersions",
 	":separateMultipleMajorReleases",

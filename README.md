@@ -74,14 +74,48 @@ yarn test:watch
 **Don't need tests?**
 1. Run `yarn remove jest ts-jest @types/jest`
 2. Remove the `test` directory and `jest.config.js`
-3. Remove the `test` and `test:watch` scripts in `package.json`
+3. Change the `test` script in `package.json` to execute `yarn tsc:check` instead.
+4. Remove the ``test:watch` script in `package.json`
 
 ## Environment variables
 You can create a `.env` file in the root of the directory. The variables will be automatically available in development when using `yarn dev`. This uses the `dotenv` package under the hood by running `node -r dotenv/config` (see `nodemon.json`).
 
+## GitHub actions
+This template comes with 2 actions pre-configured.
+There is a free tier to GitHub actions, but depending on the usage, you might be charged. To avoid this, update the spending limit of your GitHub account.
+More information: https://docs.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/managing-your-spending-limit-for-github-actions
+
+### Test workflow
+Every pull request automatically gets tested by running `yarn test`. Results will be visible in the Actions tab in the repository and under the pull request.
+
+**Don't want to use the test workflow?** Remove the file `.github/workflows/test.yml`
+
+### Release workflow
+On every push to the branches `main` and `next`, the code will be tested using `yarn test` and afterwards `semantic-release` will be run.
+[semantic-release](https://semantic-release.gitbook.io/semantic-release/) is a tool to fully automate version management and package publishing.
+What this means is on every push this will:
+1. Analyze your commit history to find out whether this is a patch, minor or major (breaking) release. This uses the [Angular commit message format](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format), so you must author your commits in this format.
+2. Bump the version in your `package.json`
+3. Generate a changelog which will be written to `CHANGELOG.md`
+4. Create a git tag and a release in GitHub which includes the changelog.
+5. Notify every PR author if their changes are released.
+
+When pushing to the `next` branch, a pre-release is created.
+
+**Want to publish your package to npm automatically?** Update the `package.json` and configure [@semantic-release/npm](https://github.com/semantic-release/npm).
+
+Because every commit will lead to a new release automatically, you need to work on the `dev` branch and feature branches and only merge your work over to master when you want to draft a release.
+See the `semantic-release` website for additional help.
+
+**Don't want to use semantic-release?**
+I recommend you to try it out, but I agree that it can be very challenging if you dont have any experience with it, to start writing commits in angular format and working with multiple branches. You can remove the release workflow by doing the following:
+1. `yarn remove semantic-release @types/semantic-release @semantic-release/changelog @semantic-release/git`
+2. Remove the `release` section in `package.json`
+3. Remove the file `.github/workflows/release.yml`
+
 ## Renovate bot
 [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate) is pre-configured to keep dependencies pinned and up-to-date.
-You have to install Renovate in your GitHub repo for this to work.
+Renovate will make PRs against the `dev`branch. This and more can be configured in `.github/renovate.json`. You have to install Renovate in your GitHub repo for this to work.
 
 **Don't want to use Renovate?** Remove the file `.github/renovate.json`
 
@@ -100,9 +134,6 @@ There is a sample `Dockerfile` which will produce a lightweight image of your ap
 # Build docker image
 docker build -t myapplication .
 ```
-
-## Other recommendations
-Automate version management and package publishing e.g. using [semantic-release](https://semantic-release.gitbook.io/semantic-release/).
 
 ## Don't like something that is configured in this repo?
 This repository is meant to be a good starting point for Node.js applications written in TypeScript.

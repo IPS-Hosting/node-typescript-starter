@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "node-typescript",
+  "name": "node-typescript-starter",
   "version": "1.0.0",
-  "description": "A Node.js application written in TypeScript",
+  "description": "A very opinionated template for Node.js applications written in TypeScript.",
   "license": "UNLICENSED",
   "scripts": {
     "build": "tsc --project ./tsconfig.json",
@@ -22,9 +22,12 @@
     "tslib": "2.2.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/git": "9.0.0",
     "@tsconfig/node14": "1.0.0",
     "@types/jest": "26.0.22",
     "@types/node": "14.14.37",
+    "@types/semantic-release": "17.2.0",
     "@typescript-eslint/eslint-plugin": "4.21.0",
     "@typescript-eslint/parser": "4.21.0",
     "@typescript-eslint/typescript-estree": "4.21.0",
@@ -35,8 +38,26 @@
     "jest": "26.6.3",
     "nodemon": "2.0.7",
     "prettier": "2.2.1",
+    "semantic-release": "17.4.2",
     "ts-jest": "26.5.4",
     "ts-node": "9.1.1",
     "typescript": "4.2.4"
+  },
+  "release": {
+	"branches": [
+	  "master",
+	  {
+		"name": "next",
+		"prelease": true
+	  }
+	],
+	"preset": "angular",
+	"plugins": [
+	  "@semantic-release/commit-analyzer",
+	  "@semantic-release/release-notes-generator",
+	  "@semantic-release/changelog",
+	  "@semantic-release/github",
+	  "@semantic-release/git"
+	]
   }
 }
