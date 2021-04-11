@@ -75,7 +75,7 @@ yarn test:watch
 1. Run `yarn remove jest ts-jest @types/jest`
 2. Remove the `test` directory and `jest.config.js`
 3. Change the `test` script in `package.json` to execute `yarn tsc:check` instead.
-4. Remove the ``test:watch` script in `package.json`
+4. Remove the `test:watch` script in `package.json`
 
 ## Environment variables
 You can create a `.env` file in the root of the directory. The variables will be automatically available in development when using `yarn dev`. This uses the `dotenv` package under the hood by running `node -r dotenv/config` (see `nodemon.json`).
