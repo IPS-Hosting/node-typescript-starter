@@ -1,9 +1,5 @@
 module.exports = {
-	extends: [
-		'eslint:recommended',
-		'plugin:prettier/recommended',
-		'prettier',
-	],
+	extends: ['eslint:recommended', 'plugin:prettier/recommended', 'prettier'],
 	ignorePatterns: ['node_modules/', 'dist/'],
 	root: true,
 	env: {
@@ -23,7 +19,7 @@ module.exports = {
 			parserOptions: {
 				ecmaVersion: 2020,
 				sourceType: 'module',
-				project: './tsconfig.json',
+				project: './tsconfig.eslint.json',
 			},
 			rules: {
 				'no-undef': 'off', // TypeScript already ensures we are not using non-existent variables.

@@ -58,6 +58,20 @@ yarn lint
 yarn lint:fix
 ```
 
+## Testing
+The testing framework [jest](https://jestjs.io) is pre-configured to work with TypeScript.
+Write tests in the test directory and configure jest with the `jest.config.js`.
+```
+# Run tests
+yarn test
+# Run tests and watch for file changes
+yarn test:watch
+```
+**Don't need tests?**
+1. Run `yarn remove jest ts-jest @types/jest`
+2. Remove the `test` directory and `jest.config.js`
+3. Remove the `test` and `test:watch` scripts in `package.json`
+
 ## Environment variables
 You can create a `.env` file in the root of the directory. The variables will be automatically available in development when using `yarn dev`. This uses the `dotenv` package under the hood by running `node -r dotenv/config` (see `nodemon.json`).
 
