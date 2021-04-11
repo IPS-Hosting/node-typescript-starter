@@ -15,12 +15,14 @@ Dependency installations are nearly instant and work offline due to the use of a
 
 Documentation: https://yarnpkg.com/getting-started
 
-It is recommended to always pin dependencies except peer dependencies to a specific version.
 ```
-# Install a package to dependencies.
-yarn add -E package
-# Install a package to devDependencies.
-yarn add -DE package
+# With dependency pinning
+yarn add -E package # Install package to dependencies
+yarn add -DE package # Install package to devDependencies
+
+# Without dependency pinning
+yarn add package # Install package to dependencies
+yarn add -D package # Install package to devDependencies
 ```
 `yarn` is configured to automatically install corresponding `@types/` packages.
 
@@ -63,6 +65,14 @@ You can create a `.env` file in the root of the directory. The variables will be
 [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate) is pre-configured to keep dependencies pinned and up-to-date.
 You have to install Renovate in your GitHub repo for this to work. Renovate can be configured in `.github/renovate.json`.
 Delete the file if you dont want to use the Renovate bot.
+
+## Dependency pinning
+It is recommended that you always pin your dependencies and let Renovate author PRs to update your dependencies.
+See https://docs.renovatebot.com/dependency-pinning/ for more information.
+If you use Renovate, it is pre-configured to pin your dependencies and you can use the `-E` flag of `yarn` to pin dependencies during installation.
+
+However if you are authoring a library to be used by others or dont want to use a tool like Renovate, it might be better to not pin your dependencies, but use version ranges.
+Just leave out the `-E` flag when installing dependencies. If you are using renovate, edit the `.github/renovate.json` file and remove `:pinVersions` in line 5.
 
 ## Docker
 There is a sample `Dockerfile` which will produce a lightweight image of your application, which only includes production dependencies and code. It is based on alpine Linux.
