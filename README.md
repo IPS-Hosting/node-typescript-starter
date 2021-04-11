@@ -24,7 +24,7 @@ yarn add -DE package # Install package to devDependencies
 yarn add package # Install package to dependencies
 yarn add -D package # Install package to devDependencies
 ```
-`yarn` is configured to automatically install corresponding `@types/` packages.
+`yarn` is configured to automatically install corresponding `@types/` packages. (See https://yarnpkg.com/api/modules/plugin_typescript.html)
 
 ## Important commands
 ```
