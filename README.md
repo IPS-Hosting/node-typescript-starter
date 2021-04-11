@@ -63,8 +63,9 @@ You can create a `.env` file in the root of the directory. The variables will be
 
 ## Renovate bot
 [Renovate](https://www.whitesourcesoftware.com/free-developer-tools/renovate) is pre-configured to keep dependencies pinned and up-to-date.
-You have to install Renovate in your GitHub repo for this to work. Renovate can be configured in `.github/renovate.json`.
-Delete the file if you dont want to use the Renovate bot.
+You have to install Renovate in your GitHub repo for this to work.
+
+**Don't want to use Renovate?** Remove the file `.github/renovate.json`
 
 ## Dependency pinning
 It is recommended that you always pin your dependencies and let Renovate author PRs to update your dependencies.
