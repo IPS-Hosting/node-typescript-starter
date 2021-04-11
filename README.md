@@ -104,7 +104,7 @@ When pushing to the `next` branch, a pre-release is created.
 
 **Want to publish your package to npm automatically?** Update the `package.json` and configure [@semantic-release/npm](https://github.com/semantic-release/npm).
 
-Because every commit will lead to a new release automatically, you need to work on the `dev` branch and feature branches and only merge your work over to master when you want to draft a release.
+Because every commit will lead to a new release automatically, you need to work on the `dev` branch and feature branches and only merge your work over to main when you want to draft a release.
 See the `semantic-release` website for additional help.
 
 **Don't want to use semantic-release?**

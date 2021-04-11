@@ -45,7 +45,7 @@
   },
   "release": {
     "branches": [
-      "master",
+      "main",
       {
         "name": "next",
         "prelease": true
