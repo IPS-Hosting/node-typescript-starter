@@ -1,6 +1,10 @@
 # node-typescript-starter
 A very opinionated template for Node.js applications written in TypeScript.
 
+## Using this template
+This is a GitHub template repository. You can create a new repository from this template by clicking the green **Use this template** button.
+See https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template.
+
 ## Version information
 * Node.js **14**
 * TypeScript **4.2**
