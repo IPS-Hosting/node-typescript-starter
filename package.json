@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "node-typescript-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very opinionated template for Node.js applications written in TypeScript.",
   "license": "UNLICENSED",
   "scripts": {
