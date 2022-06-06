@@ -48,7 +48,7 @@
       "main",
       {
         "name": "next",
-        "prelease": true
+        "prerelease": true
       }
     ],
     "preset": "angular",
