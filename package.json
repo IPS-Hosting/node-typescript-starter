@@ -46,10 +46,15 @@
   "release": {
     "branches": [
       "main",
-      {
-        "name": "next",
-        "prerelease": true
-      }
+      "next",
+			{
+				"name": "alpha",
+				"prerelease": true
+			},
+			{
+				"name": "beta",
+				"prerelease": true
+			}
     ],
     "preset": "angular",
     "plugins": [
