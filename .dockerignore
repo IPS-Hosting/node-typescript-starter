@@ -4,10 +4,6 @@
 
 # Whitelist only files needed in the build context.
 !package.json
-!yarn.lock
-!.yarnrc.yml
-!.yarn/cache
-!.yarn/releases
-!.yarn/plugins
+!pnpm-lock.yaml
 !tsconfig.json
 !src

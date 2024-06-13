@@ -1,7 +1,10 @@
 {
-  "editor.detectIndentation": false,
-  "editor.insertSpaces": false,
-  "editor.codeActionsOnSave": {
-	"source.fixAll.eslint": true
-  }
+	"[javascript][typescript][json]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"quickfix.biome": "explicit",
+			"source.organizeImports.biome": "explicit"
+		}
+	}
 }

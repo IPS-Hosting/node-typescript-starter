@@ -1,15 +1,21 @@
 {
-  "extends": "@tsconfig/node14",
-  "compilerOptions": {
-	"outDir": "./dist",
-	"rootDir": "./src",
+	"extends": ["@tsconfig/node-lts", "@tsconfig/strictest"],
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "./src",
 
-	"importHelpers": true,
-	"sourceMap": true,
-	"importsNotUsedAsValues": "error",
-	"noFallthroughCasesInSwitch": true,
-	"noUncheckedIndexedAccess": true,
-	"noUnusedLocals": true,
-  },
-  "include": ["src/**/*.ts"]
+		// Use ESM
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+
+		// Use helpers from tslib, instead of inlining them
+		"noEmitHelpers": true,
+		"importHelpers": true,
+
+		// Generate inline source maps
+		"sourceMap": true,
+		"inlineSources": true,
+		"sourceRoot": "/"
+	},
+	"include": ["src/**/*.ts"]
 }

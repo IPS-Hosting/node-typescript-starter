@@ -1,34 +1,57 @@
-# Base
-FROM node:14-alpine as base
+# syntax = docker/dockerfile:1.7
 
-# Builder
+# BASE
+FROM node:20.14.0-bullseye-slim AS base
+
+## Setup pnpm
+RUN corepack enable
+
+## Let pnpm think we are in a CI environment so interactive prompts are skipped.
+ENV CI=true
+
+# BUILDER
 FROM base as builder
 
-# Install yarn.
-RUN apk add --update --no-cache yarn
+## Build as non-root user
+USER node
+WORKDIR /home/node/build
+RUN pnpm config set store-dir /home/node/.pnpm-store
 
-WORKDIR /home/node
+## Fetch dependencies: https://pnpm.io/cli/fetch
+COPY --chown=node:node pnpm-lock.yaml ./
+RUN --mount=type=cache,target=/home/node/.pnpm-store,id=pnpm-store,uid=1000,gid=1000 \
+    pnpm fetch
 
-# Install dependencies
-COPY --chown=node:node .yarn/ .yarn/
-COPY --chown=node:node ["package.json", "yarn.lock", ".yarnrc.yml", "./"]
-RUN yarn install
+## Install dependencies
+COPY --chown=node:node package.json ./
+RUN --mount=type=cache,target=/home/node/.pnpm-store,id=pnpm-store,uid=1000,gid=1000 \
+    pnpm install --offline
 
-# Build code and remove dev dependencies
+## Build app
 COPY --chown=node:node . .
-RUN yarn build && yarn workspaces focus --production
+RUN pnpm run build
 
-# Final image
+## Prune dev dependencies
+RUN --mount=type=cache,target=/home/node/.pnpm-store,id=pnpm-store,uid=1000,gid=1000 \
+    pnpm prune --prod
+
+# FINAL IMAGE
 FROM base
 
-USER node
-WORKDIR /home/node
-
+## Runtime environment
 ENV NODE_ENV=production
 
-# Copy only required files from builder to final image.
-COPY --from=builder --chown=node:node /home/node/node_modules/ ./node_modules/
-COPY --from=builder --chown=node:node /home/node/package.json ./
-COPY --from=builder --chown=node:node /home/node/dist/ ./dist/
+## Run as non-root user
+USER node
+WORKDIR /home/node/app
+RUN pnpm config set store-dir /home/node/.pnpm-store
 
-CMD ["yarn", "start"]
+EXPOSE 8080/tcp
+
+## Copy runtime files from builder to final image
+COPY --from=builder --chown=node:node /home/node/build/package.json ./
+COPY --from=builder --chown=node:node /home/node/build/pnpm-lock.yaml ./
+COPY --from=builder --chown=node:node /home/node/build/node_modules/ ./node_modules/
+COPY --from=builder --chown=node:node /home/node/build/dist/ ./dist/
+
+CMD ["pnpm", "run", "start"]

@@ -1,5 +1,5 @@
 {
-  "watch": ["src/"],
-  "ext": "ts",
-  "exec": "ts-node -r dotenv/config --transpile-only --project ./tsconfig.json ./src/index.ts"
+	"watch": ["src/"],
+	"ext": "ts",
+	"exec": "node --import @swc-node/register/esm-register ./src/main.ts"
 }

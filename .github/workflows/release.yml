@@ -9,25 +9,40 @@ on:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          show-progress: false
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
+          cache: pnpm
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: pnpm install
+
+      - name: Run Biome
+        run: pnpm biome ci .
+
+      - name: Typescript check
+        run: pnpm run tsc:check
 
       - name: Test
-        run: yarn test
+        run: pnpm run test
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: yarn semantic-release
+        run: pnpm exec semantic-release
