@@ -1,7 +1,7 @@
 # syntax = docker/dockerfile:1.8
 
 # BASE
-FROM node:20.14.0-bullseye-slim AS base
+FROM node:20.18.0-bullseye-slim AS base
 
 ## Setup pnpm
 RUN corepack enable
