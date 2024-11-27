@@ -1,4 +1,4 @@
-# syntax = docker/dockerfile:1.8
+# syntax = docker/dockerfile:1.12
 
 # BASE
 FROM node:20.14.0-bullseye-slim AS base
