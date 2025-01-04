@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/IPS-Hosting/node-typescript-starter/compare/v2.0.0...v2.0.1) (2025-01-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tslib to v2.8.1 ([779444b](https://github.com/IPS-Hosting/node-typescript-starter/commit/779444b623612dbd44138b8301c88126052e0a21))
+
 # [2.0.0](https://github.com/IPS-Hosting/node-typescript-starter/compare/v1.0.1...v2.0.0) (2024-06-13)
 
 
