@@ -19,9 +19,7 @@
 		"test:ui": "vitest --ui",
 		"prepack": "pnpm run build"
 	},
-	"files": [
-		"dist/**/*"
-	],
+	"files": ["dist/**/*"],
 	"dependencies": {
 		"tslib": "2.8.1"
 	},
