@@ -31,8 +31,8 @@ importers:
         specifier: 2.0.5
         version: 2.0.5
       '@types/node':
-        specifier: 20.19.23
-        version: 20.19.23
+        specifier: 20.19.43
+        version: 20.19.43
       '@types/semantic-release':
         specifier: 21.1.0
         version: 21.1.0(typescript@5.7.3)
@@ -53,7 +53,7 @@ importers:
         version: 5.7.3
       vitest:
         specifier: 2.1.8
-        version: 2.1.8(@types/node@20.19.23)(@vitest/ui@2.1.8)
+        version: 2.1.8(@types/node@20.19.43)(@vitest/ui@2.1.8)
 
 packages:
 
@@ -717,8 +717,8 @@ packages:
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
-  '@types/node@20.19.23':
-    resolution: {integrity: sha512-yIdlVVVHXpmqRhtyovZAcSy0MiPcYWGkoO4CGe/+jpP0hmNuihm4XhHbADpK++MsiLHP5MVlv+bcgdF99kSiFQ==}
+  '@types/node@20.19.43':
+    resolution: {integrity: sha512-6oYBAi5ikg4Pl+kGsoYtawUMBT2zZMCvPNF7pVLnHZfd1zf38DRiWn/gT01RYCdUqkv7Fhr+C9ot4/tb+2sVvA==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3019,7 +3019,7 @@ snapshots:
 
   '@types/estree@1.0.5': {}
 
-  '@types/node@20.19.23':
+  '@types/node@20.19.43':
     dependencies:
       undici-types: 6.21.0
 
@@ -3048,7 +3048,7 @@ snapshots:
       std-env: 3.8.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.8(@types/node@20.19.23)(@vitest/ui@2.1.8)
+      vitest: 2.1.8(@types/node@20.19.43)(@vitest/ui@2.1.8)
     transitivePeerDependencies:
       - supports-color
 
@@ -3059,13 +3059,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.8(vite@5.2.13(@types/node@20.19.23))':
+  '@vitest/mocker@2.1.8(vite@5.2.13(@types/node@20.19.43))':
     dependencies:
       '@vitest/spy': 2.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 5.2.13(@types/node@20.19.23)
+      vite: 5.2.13(@types/node@20.19.43)
 
   '@vitest/pretty-format@2.1.8':
     dependencies:
@@ -3095,7 +3095,7 @@ snapshots:
       sirv: 3.0.0
       tinyglobby: 0.2.10
       tinyrainbow: 1.2.0
-      vitest: 2.1.8(@types/node@20.19.23)(@vitest/ui@2.1.8)
+      vitest: 2.1.8(@types/node@20.19.43)(@vitest/ui@2.1.8)
 
   '@vitest/utils@2.1.8':
     dependencies:
@@ -4724,13 +4724,13 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-node@2.1.8(@types/node@20.19.23):
+  vite-node@2.1.8(@types/node@20.19.43):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0
       es-module-lexer: 1.6.0
       pathe: 1.1.2
-      vite: 5.2.13(@types/node@20.19.23)
+      vite: 5.2.13(@types/node@20.19.43)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4741,19 +4741,19 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.13(@types/node@20.19.23):
+  vite@5.2.13(@types/node@20.19.43):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.18.0
     optionalDependencies:
-      '@types/node': 20.19.23
+      '@types/node': 20.19.43
       fsevents: 2.3.3
 
-  vitest@2.1.8(@types/node@20.19.23)(@vitest/ui@2.1.8):
+  vitest@2.1.8(@types/node@20.19.43)(@vitest/ui@2.1.8):
     dependencies:
       '@vitest/expect': 2.1.8
-      '@vitest/mocker': 2.1.8(vite@5.2.13(@types/node@20.19.23))
+      '@vitest/mocker': 2.1.8(vite@5.2.13(@types/node@20.19.43))
       '@vitest/pretty-format': 2.1.8
       '@vitest/runner': 2.1.8
       '@vitest/snapshot': 2.1.8
@@ -4769,11 +4769,11 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
-      vite: 5.2.13(@types/node@20.19.23)
-      vite-node: 2.1.8(@types/node@20.19.23)
+      vite: 5.2.13(@types/node@20.19.43)
+      vite-node: 2.1.8(@types/node@20.19.43)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 20.19.23
+      '@types/node': 20.19.43
       '@vitest/ui': 2.1.8(vitest@2.1.8)
     transitivePeerDependencies:
       - less
