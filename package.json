@@ -38,7 +38,7 @@
 		"@vitest/ui": "3.2.7",
 		"nodemon": "3.1.9",
 		"semantic-release": "24.2.1",
-		"typescript": "5.7.3",
+		"typescript": "5.9.3",
 		"vitest": "3.2.7"
 	},
 	"release": {
