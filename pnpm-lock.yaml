@@ -28,8 +28,8 @@ importers:
         specifier: 22.0.4
         version: 22.0.4
       '@tsconfig/strictest':
-        specifier: 2.0.5
-        version: 2.0.5
+        specifier: 2.0.8
+        version: 2.0.8
       '@types/node':
         specifier: 20.19.43
         version: 20.19.43
@@ -730,8 +730,8 @@ packages:
   '@tsconfig/node-lts@22.0.4':
     resolution: {integrity: sha512-5eAeCX6l/EYe6H2UAw5nBgjfAgdlsR+lSp8YNNGwz+ixoi7JfJ5bOQvsiEhxGm5bOZFVF+cJSIj4tanpCCRMIw==}
 
-  '@tsconfig/strictest@2.0.5':
-    resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
+  '@tsconfig/strictest@2.0.8':
+    resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
 
   '@tybys/wasm-util@0.9.0':
     resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
@@ -3073,7 +3073,7 @@ snapshots:
 
   '@tsconfig/node-lts@22.0.4': {}
 
-  '@tsconfig/strictest@2.0.5': {}
+  '@tsconfig/strictest@2.0.8': {}
 
   '@tybys/wasm-util@0.9.0':
     dependencies:
