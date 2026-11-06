@@ -43,8 +43,8 @@ importers:
         specifier: 3.2.7
         version: 3.2.7(vitest@3.2.7)
       nodemon:
-        specifier: 3.1.9
-        version: 3.1.9
+        specifier: 3.1.14
+        version: 3.1.14
       semantic-release:
         specifier: 25.0.9
         version: 25.0.9(typescript@7.0.2)
@@ -1131,6 +1131,10 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
+  balanced-match@4.0.4:
+    resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
+    engines: {node: 18 || 20 || >=22}
+
   before-after-hook@4.0.0:
     resolution: {integrity: sha512-q6tR3RPqIB1pMiTRMFcZwuG5T8vwp+vUvEG0vuI6B+Rikh5BfPp2fQ82c925FOs+b0lcFQ8CFrL+KbilfZFhOQ==}
 
@@ -1141,11 +1145,12 @@ packages:
   bottleneck@2.19.5:
     resolution: {integrity: sha512-VHiNCbI1lKdl44tGrhNfU3lup0Tj/ZBMJB5/2ZbNXRCPuRCO7ed2mgcK4r17y+KB2EfuYuRaVlwNbAeaWGSpbw==}
 
-  brace-expansion@1.1.11:
-    resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
-
   brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+
+  brace-expansion@5.0.12:
+    resolution: {integrity: sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ==}
+    engines: {node: 20 || >=22}
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -1233,9 +1238,6 @@ packages:
   compare-func@2.0.0:
     resolution: {integrity: sha512-zHig5N+tPWARooBnb0Zx1MFcdfpyJrfTJ3Y5L+IFvUm8rM74hHz66z0gw0x4tijh5CorKkKUCnW82R2vmpeCRA==}
 
-  concat-map@0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
-
   config-chain@1.1.13:
     resolution: {integrity: sha512-qj+f8APARXHrM0hraqXYb2/bOVSV4PvJQlNZ/DVj0QrmNM2q2euizkeuVckQ57J+W0mRH6Hvi+k50M4Jul2VRQ==}
 
@@ -1296,15 +1298,6 @@ packages:
   data-view-byte-offset@1.0.0:
     resolution: {integrity: sha512-t/Ygsytq+R995EJ5PZlD4Cu56sWa8InXySaViRzw9apusqsOO2bQP+SbYzAhR0pFKoB+43lYy8rWban9JSuXnA==}
     engines: {node: '>= 0.4'}
-
-  debug@4.3.5:
-    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -1922,8 +1915,9 @@ packages:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
     engines: {node: '>=12'}
 
-  minimatch@3.1.2:
-    resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
+  minimatch@10.2.6:
+    resolution: {integrity: sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==}
+    engines: {node: 18 || 20 || >=22}
 
   minimatch@9.0.5:
     resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
@@ -1939,9 +1933,6 @@ packages:
   mrmime@2.0.0:
     resolution: {integrity: sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==}
     engines: {node: '>=10'}
-
-  ms@2.1.2:
-    resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -1964,8 +1955,8 @@ packages:
     resolution: {integrity: sha512-Z3lTE9pLaJF47NyMhd4ww1yFTAP8YhYI8SleJiHzM46Fgpm5cnNzSl9XfzFNqbaz+VlJrIj3fXQ4DeN1Rjm6cw==}
     engines: {node: '>=18'}
 
-  nodemon@3.1.9:
-    resolution: {integrity: sha512-hdr1oIb2p6ZSxu3PB2JWWYS7ZQ0qvaZsc3hK8DR8f02kRzc8rjYmxAIvdz+aYC+8F2IjNaB7HMcSDg8nQpJxyg==}
+  nodemon@3.1.14:
+    resolution: {integrity: sha512-jakjZi93UtB3jHMWsXL68FXSAosbLfY0In5gtKq3niLSkrWznrVBzXFNOEMJUfc9+Ke7SHWoAZsiMkNP3vq6Jw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -3276,7 +3267,7 @@ snapshots:
       conventional-changelog-writer: 8.0.0
       conventional-commits-filter: 5.0.0
       conventional-commits-parser: 6.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       import-from-esm: 2.0.0
       lodash-es: 4.17.21
       micromatch: 4.0.7
@@ -3290,7 +3281,7 @@ snapshots:
     dependencies:
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       dir-glob: 3.0.1
       execa: 10.2.1
       lodash-es: 4.17.21
@@ -3308,7 +3299,7 @@ snapshots:
       '@octokit/plugin-throttling': 11.0.5(@octokit/core@7.0.8)
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       dir-glob: 3.0.1
       http-proxy-agent: 9.1.0
       https-proxy-agent: 9.1.0
@@ -3349,7 +3340,7 @@ snapshots:
       conventional-changelog-writer: 8.0.0
       conventional-commits-filter: 5.0.0
       conventional-commits-parser: 6.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       import-from-esm: 2.0.0
       lodash-es: 4.17.21
       read-package-up: 11.0.0
@@ -3373,7 +3364,7 @@ snapshots:
       '@swc-node/sourcemap-support': 0.6.1
       '@swc/core': 1.5.29
       colorette: 2.0.20
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       fast-json-stable-stringify: 2.1.0
       oxc-resolver: 11.24.2
       pirates: 4.0.7
@@ -3539,7 +3530,7 @@ snapshots:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 1.0.2
       ast-v8-to-istanbul: 0.3.12
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       istanbul-lib-coverage: 3.2.2
       istanbul-lib-report: 3.0.1
       istanbul-lib-source-maps: 5.0.6
@@ -3676,20 +3667,21 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
+  balanced-match@4.0.4: {}
+
   before-after-hook@4.0.0: {}
 
   binary-extensions@2.3.0: {}
 
   bottleneck@2.19.5: {}
 
-  brace-expansion@1.1.11:
-    dependencies:
-      balanced-match: 1.0.2
-      concat-map: 0.0.1
-
   brace-expansion@2.0.1:
     dependencies:
       balanced-match: 1.0.2
+
+  brace-expansion@5.0.12:
+    dependencies:
+      balanced-match: 4.0.4
 
   braces@3.0.3:
     dependencies:
@@ -3796,8 +3788,6 @@ snapshots:
       array-ify: 1.0.0
       dot-prop: 5.3.0
 
-  concat-map@0.0.1: {}
-
   config-chain@1.1.13:
     dependencies:
       ini: 1.3.8
@@ -3864,15 +3854,11 @@ snapshots:
       es-errors: 1.3.0
       is-data-view: 1.0.1
 
-  debug@4.3.5(supports-color@5.5.0):
-    dependencies:
-      ms: 2.1.2
-    optionalDependencies:
-      supports-color: 5.5.0
-
-  debug@4.4.3:
+  debug@4.4.3(supports-color@5.5.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 5.5.0
 
   deep-eql@5.0.2: {}
 
@@ -4259,7 +4245,7 @@ snapshots:
   http-proxy-agent@9.1.0:
     dependencies:
       agent-base: 9.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       proxy-agent-negotiate: 1.1.0
     transitivePeerDependencies:
       - kerberos
@@ -4268,7 +4254,7 @@ snapshots:
   https-proxy-agent@9.1.0:
     dependencies:
       agent-base: 9.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       proxy-agent-negotiate: 1.1.0
     transitivePeerDependencies:
       - kerberos
@@ -4289,7 +4275,7 @@ snapshots:
 
   import-from-esm@2.0.0:
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       import-meta-resolve: 4.1.0
     transitivePeerDependencies:
       - supports-color
@@ -4422,7 +4408,7 @@ snapshots:
   istanbul-lib-source-maps@5.0.6:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       istanbul-lib-coverage: 3.2.2
     transitivePeerDependencies:
       - supports-color
@@ -4536,9 +4522,9 @@ snapshots:
 
   mimic-fn@4.0.0: {}
 
-  minimatch@3.1.2:
+  minimatch@10.2.6:
     dependencies:
-      brace-expansion: 1.1.11
+      brace-expansion: 5.0.12
 
   minimatch@9.0.5:
     dependencies:
@@ -4549,8 +4535,6 @@ snapshots:
   minipass@7.1.2: {}
 
   mrmime@2.0.0: {}
-
-  ms@2.1.2: {}
 
   ms@2.1.3: {}
 
@@ -4573,12 +4557,12 @@ snapshots:
       emojilib: 2.4.0
       skin-tone: 2.0.0
 
-  nodemon@3.1.9:
+  nodemon@3.1.14:
     dependencies:
       chokidar: 3.6.0
-      debug: 4.3.5(supports-color@5.5.0)
+      debug: 4.4.3(supports-color@5.5.0)
       ignore-by-default: 1.0.1
-      minimatch: 3.1.2
+      minimatch: 10.2.6
       pstree.remy: 1.1.8
       semver: 7.6.2
       simple-update-notifier: 2.0.0
@@ -4885,7 +4869,7 @@ snapshots:
       '@semantic-release/release-notes-generator': 14.1.1(semantic-release@25.0.9(typescript@7.0.2))
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.0(typescript@7.0.2)
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       env-ci: 11.0.0
       execa: 9.2.0
       figures: 6.1.0
@@ -5283,7 +5267,7 @@ snapshots:
   vite-node@3.2.4(@types/node@20.19.43):
     dependencies:
       cac: 6.7.14
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       es-module-lexer: 1.7.0
       pathe: 2.0.3
       vite: 5.2.13(@types/node@20.19.43)
@@ -5317,7 +5301,7 @@ snapshots:
       '@vitest/spy': 3.2.7
       '@vitest/utils': 3.2.7
       chai: 5.3.3
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@5.5.0)
       expect-type: 1.4.0
       magic-string: 0.30.17
       pathe: 2.0.3
