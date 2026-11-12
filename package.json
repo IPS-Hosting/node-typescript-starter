@@ -26,7 +26,7 @@
 		"tslib": "2.9.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.6.6",
+		"@biomejs/biome": "2.6.7",
 		"@semantic-release/changelog": "7.0.0",
 		"@semantic-release/git": "11.0.1",
 		"@swc-node/register": "1.12.1",
